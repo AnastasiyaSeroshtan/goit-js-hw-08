@@ -9,8 +9,8 @@ const formData = localStorage.getItem(LOCAL_KEY) ? JSON.parse(localStorage.getIt
 const saveItem = localStorage.getItem(LOCAL_KEY);
         if (saveItem) {
             const itemParse = JSON.parse(saveItem);
-            inputEl.value = itemParse.email;
-            textareaEl.value = itemParse.message;
+            inputEl.value = itemParse.email || "";
+            textareaEl.value = itemParse.message || "";
         }
         else {
             inputEl.value = "";
